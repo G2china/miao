@@ -1,29 +1,9 @@
-if ($request.url.indexOf("trading.dmall-os.cn/cartOnline/add") != -1) {    
-    var responseContent = $response.body;
-    console.log(responseContent);
-    try {
-        var json = JSON.parse(responseContent);
-        var msg = json["sourceMsg"];
-         console.log(msg);
-        if (msg === "当前已超过限购数量") {
-            $notify("Quantumult X", "通知副标题", "这是一条通知内容");
-        }
-    } catch (err) {
-        // JSON 解析错误
-        // 可以在此处添加逻辑处理
-    }
+// 解析返回值为 JSON
+var jsonData = JSON.parse($response.body);
+
+// 检查键 msg 是否等于 "你好啊"
+if (jsonData.msg && jsonData.msg.toString() === "当前已超过限购数量") {
+    console.log("当前已超过限购数量");
 }
 
-if ($request.url.indexOf("trade.dmall-os.cn/trade/gate/mini/submit") != -1) {
-    var responseContent = $response.body;
-    try {
-        var json = JSON.parse(responseContent);
-        var msg = json["msg"];
-        if (msg === "成功") {
-            $notify("提示", "抢到了，检查待付款", "");
-        }
-    } catch (err) {
-        // JSON 解析错误
-        // 可以在此处添加逻辑处理
-    }
-}
+$done();
