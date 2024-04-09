@@ -1,5 +1,5 @@
 $notify("Quantumult X", "通知副标题12", "这是一条通知内容1");
-var body = $request.body;
+var body = $response.body;
 console.log("8989889877987");
 try {
     var jsonData = JSON.parse(body);
