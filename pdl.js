@@ -1,5 +1,5 @@
 var body = $response.body;
-
+console.log("进来了");
 try {
     // 解析返回值为 JSON
     var jsonData = JSON.parse(body);
