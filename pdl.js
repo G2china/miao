@@ -6,7 +6,7 @@ if ($request.url.indexOf("trading.dmall-os.cn/cartOnline/add") != -1) {
         var msg = json["sourceMsg"];
          console.log(msg);
         if (msg === "当前已超过限购数量") {
-            $notify("Quantumult X", "通知副标题", "这是一条通知内容1");
+            $notify("Quantumult X", "通知副标题", "这是一条通知内容");
         }
     } catch (err) {
         // JSON 解析错误
