@@ -1,4 +1,4 @@
-$notify("Quantumult X", "通知副标题", "这是一条通知内容1");
+$notify("Quantumult X", "通知副标题12", "这是一条通知内容1");
 var body = $response.body;
 try {
     var jsonData = JSON.parse(body);
