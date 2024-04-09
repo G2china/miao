@@ -1,4 +1,3 @@
-$notify("Quantumult X", "进来了", "进来了");
 if ($request.url.indexOf("trading.dmall-os.cn/cartOnline/add") != -1) {    
     var responseContent = $response.body;
     console.log(responseContent);
