@@ -10,7 +10,7 @@ if ($request.url.indexOf(url1) != -1) {
     resBody = resBody.replace(/"start_time_info":{.*?}/g, '"start_time_info":null');
     resBody = resBody.replace(/"must_read".*?]}/g, '"must_read":null');
 } else if ($request.url.indexOf(url2) != -1) {
-    //增加可预约库存 提前进
+    //增加可预约库存 提前进122
     resBody = resBody.replace(/"vote_limit":.*?,/g, '"vote_limit":666,');
     resBody = resBody.replace(/"is_started":[^}]/g, '"is_started":1');
 } else if ($request.url.indexOf(url3) != -1) {
