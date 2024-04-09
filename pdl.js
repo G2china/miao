@@ -4,7 +4,7 @@ if ($request.url.indexOf("trading.dmall-os.cn/cartOnline/add") != -1) {
         var json = JSON.parse(responseContent);
         var msg = json["sourceMsg"];
         if (msg === "当前已超过限购数量") {
-            $notification.post("提示", "库存加满了", "");
+            $notify("提示", "库存加满了", "");
         }
     } catch (err) {
         // JSON 解析错误
@@ -18,7 +18,7 @@ if ($request.url.indexOf("trade.dmall-os.cn/trade/gate/mini/submit") != -1) {
         var json = JSON.parse(responseContent);
         var msg = json["msg"];
         if (msg === "成功") {
-            $notification.post("提示", "抢到了，检查待付款", "");
+            $notify("提示", "抢到了，检查待付款", "");
         }
     } catch (err) {
         // JSON 解析错误
