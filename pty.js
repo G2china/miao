@@ -4,7 +4,7 @@ var url1 = "api.pintuanya.com/api/v1/common/groupon/detail?groupon_uuid=";
 var url2 = "api.pintuanya.com/api/v1/common/groupon/item/batch?groupon_uuid=";
 var url3 = "api.pintuanya.com/api/common/previewOrder2";
 
-// 拼团详情，将 state 改为 2
+// 详情，将 state 改为 2
 if ($request.url.indexOf(url1) != -1) {
     resBody = resBody.replace(/"state":[^,]*/g, '"state":2');
 } 
