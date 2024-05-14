@@ -13,7 +13,7 @@ $httpClient.get(url, function(error, response, data) {
     } else {
         console.log(`Token sent successfully: ${data}`);
     }
-    $done({});
 });
+$done({});
 // 可选：通过通知功能在 Quantumult X 中显示捕获到的 Token（调试用）111
 $notify("Token Captured", "X-Auth-Token", token);
