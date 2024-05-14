@@ -7,6 +7,8 @@ var url3 = "api.pintuanya.com/api/common/previewOrder2";
 // 详情，将 state 改为 2
 if ($request.url.indexOf(url1) != -1) {
     resBody = resBody.replace(/"state":[^,]*/g, '"state":2');
+    resBody = resBody.replace('"opt_share":0', '"opt_share":1');
+    resBody = resBody.replace('"opt_share_chat":0', '"opt_share_chat":1');
 } 
 // 取消冻结商品，将 is_locked 改为 0
 else if ($request.url.indexOf(url2) != -1) {
